@@ -1,0 +1,60 @@
+.TH man 1 "April 13, 2021" "0.4.2" "HSH"
+.SH NAME
+.B hsh
+- a rudimentary command-line interpreter (UNIX)
+.br
+.SH SYNOPSIS
+.B ./hsh 
+.br
+.SH DESCRIPTION
+.B hsh
+is a command-line interpreter that executes 
+.br
+commands read from the standard input or from a file.
+.br
+It can be used in interactive or non-interactive mode.
+.PP
+For interactive mode launch the executable as follows:
+\f[B]\&./hsh\f[].
+.br
+It will display the prompt: \f[B]$ \f[].
+Then it will read any input and execute
+.br
+any passed commands.
+.PP
+For non-interactive mode use a shell script to 
+.br
+redirect with a pipeline (\f[B]|\f[])
+.br
+Note: you must specify the name or the path of the command to be
+.br
+passed to \f[B]\&./hsh\f[]
+.br
+.SH BUILT-IN OPTIONS
+.B Ctrl+D
+: Exits interactive mode.
+.br
+.B env
+: Displays environmental variables.
+.br
+.B exit
+: Exits program entirely.
+.br
+.SH EXAMPLE
+.br
+$ ./hsh
+.br
+($) /bin/ls
+.br
+($) hsh main.c shell.c
+.br
+($) exit
+.br
+$
+.br
+.br
+.SH BUGS
+No known bugs
+.br
+.SH AUTHORS
+Gabriel Vazquez and Gabriela Martinez
