@@ -32,8 +32,9 @@ char *get_buff(void)
 /**
  * string_tokenizer - divides a string into separate tokens
  * @string: the string to evaluate
+ * Return: tokens separated
  */
-char string_tokenizer(char *string)
+char **string_tokenizer(char *string)
 {
 	char **token;
 	int index;
