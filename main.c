@@ -15,11 +15,11 @@ int main(void)
 
 		input = get_buff();
 
-		if (_strcmp(input, "exit") == 0)
+		if (string_compare(input, "exit") == 0)
 		{
 			file_descriptor = 0;
 		}
-		else if (_strcmp(input, "env") == 0)
+		else if (string_compare(input, "env") == 0)
 		{
 			int index;
 

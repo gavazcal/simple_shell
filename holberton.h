@@ -16,5 +16,7 @@ int string_length(char *string);
 int string_compare(char *s1, char *s2);
 char *get_buff(void);
 int fork_func(char *args[]);
+int _putchar(char c);
+int _puts(char *str);
 
 #endif
