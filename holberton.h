@@ -11,7 +11,7 @@
 extern char **environ;
 
 /*PROTOTYPES*/
-void string_tokenizer(char *string);
+char **string_tokenizer(char *string);
 int string_length(char *string);
 int string_compare(char *s1, char *s2);
 char *get_buff(void);
