@@ -16,7 +16,7 @@ char *get_buff(void)
 	if (bytes == 0)
 	{
 		_putchar('\n');
-		free(buffer);
+		free(buf);
 		exit(EXIT_SUCCESS);
 	}
 	else if (bytes == -1)
@@ -25,7 +25,7 @@ char *get_buff(void)
 		exit(EXIT_FAILURE);
 	}
 	buf[bytes - 1] = '\0';
-	fflish(stdin);
+	fflush(stdin);
 	return (buf);
 }
 
@@ -70,29 +70,29 @@ int string_length(char *string)
 	return (i);
 }
 
-/**
+ /**
  * strcpy - copies a string
  * @dest: destination string
  * @src: origin string
  * @n: sting length
  * Return: destination memory address
  */
-char *strcpy(char *dest, char *src, int n)
-{
-	int idx;
-
-	for (idx = 0; idx < n && src[idx] != '\0'; idx++)
-	{
-		dest[idx] = src[idx];
-	}
-	while (idx < n)
-	{
-		dest[idx] = '\0';
-		idx++;
-	}
-	return (dest);
-}
-
+/**char *strcpy(char *dest, char *src, int n)
+ *{
+ *	int idx;
+ *
+ *	for (idx = 0; idx < n && src[idx] != '\0'; idx++)
+ *	{
+ *		dest[idx] = src[idx];
+ *	}
+ *	while (idx < n)
+ *	{
+ *		dest[idx] = '\0';
+ *		idx++;
+ *	}
+ *	return (dest);
+ *}
+*/
 /**
  * string_compare - compares two strings to acertain if they are identical
  * @s1: string one
