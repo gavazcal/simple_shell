@@ -21,21 +21,5 @@ int _putchar(char c);
 int _puts(char *str);
 char *string_cpy(char *dest, char *src, int n);
 
-/*Path*/
-char **check_path(char **args);
-char *path_concat(char *s1, char *s2);
-char *_copypath(char *name);
-
-typedef struct addresses
-{
-	void *address;
-	struct addresses *next;
-} addr_t;
-
-typedef struct builtins_s
-{
-	char *name;
-	int (*func)();
-} builtins_t;
 
 #endif
