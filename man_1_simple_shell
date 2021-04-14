@@ -4,11 +4,11 @@
 - a rudimentary command-line interpreter (UNIX)
 .br
 .SH SYNOPSIS
-.B ./hsh 
+.B ./hsh
 .br
 .SH DESCRIPTION
 .B hsh
-is a command-line interpreter that executes 
+is a command-line interpreter that executes
 .br
 commands read from the standard input or from a file.
 .br
@@ -22,7 +22,7 @@ Then it will read any input and execute
 .br
 any passed commands.
 .PP
-For non-interactive mode use a shell script to 
+For non-interactive mode use a shell script to
 .br
 redirect with a pipeline (\f[B]|\f[])
 .br
