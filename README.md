@@ -164,9 +164,13 @@ Our shell is a simple command-line interpreter that presents a prompt, reads inp
 
 Example (interactive mode):
 ./hsh
+
 $ /bin/ls
+
 $ hsh main.c shell.c
+
 $ exit
+
 $
 
 Authors:
