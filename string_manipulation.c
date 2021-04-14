@@ -76,8 +76,8 @@ int string_length(char *string)
  * @src: origin string
  * @n: sting length
  * Return: destination memory address
- */
-/**char *strcpy(char *dest, char *src, int n)
+ *
+ *char *strcpy(char *dest, char *src, int n)
  *{
  *	int idx;
  *
@@ -92,7 +92,7 @@ int string_length(char *string)
  *	}
  *	return (dest);
  *}
-*/
+ */
 /**
  * string_compare - compares two strings to acertain if they are identical
  * @s1: string one
