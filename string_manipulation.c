@@ -8,15 +8,18 @@
 char *get_buff(void)
 {
 	char *buf = NULL;
-	size_t size = 1024;
+	size_t size = 0;
 	int bytes = 0;
 
-	buf = malloc(sizeof(char) * size);
+	bytes = getline(&buf, &size, stdin);
 
-	if (bytes == 0)
+	if (bytes == EOF)
 	{
-		_putchar('\n');
-		free(buf);
+		if (isatty(STDIN_FILENO) == 1)
+		{
+			_putchar('\n');
+		}
+			free(buf);
 		exit(EXIT_SUCCESS);
 	}
 	else if (bytes == -1)
@@ -24,7 +27,7 @@ char *get_buff(void)
 		perror("Error: could not read");
 		exit(EXIT_FAILURE);
 	}
-	buf[bytes - 1] = '\0';
+	buf[bytes + 1] = '\0';
 	fflush(stdin);
 	return (buf);
 }
