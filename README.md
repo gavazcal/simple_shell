@@ -160,10 +160,14 @@ hsh main.c shell.c test_ls_2
 $
 
 Description:
+
 Our shell is a simple command-line interpreter that presents a prompt, reads input, separates the input into arguments and runs any commands it finds.
 
 Example (interactive mode):
+
 ./hsh
+
+$
 
 $ /bin/ls
 
