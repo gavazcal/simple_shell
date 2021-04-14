@@ -19,6 +19,7 @@ char *get_buff(void);
 int fork_func(char *args[]);
 int _putchar(char c);
 int _puts(char *str);
+char *string_cpy(char *dest, char *src, int n);
 
 /*Path*/
 char **check_path(char **args);

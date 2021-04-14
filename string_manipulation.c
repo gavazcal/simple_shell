@@ -8,15 +8,18 @@
 char *get_buff(void)
 {
 	char *buf = NULL;
-	size_t size = 1024;
+	size_t size = 0;
 	int bytes = 0;
 
-	buf = malloc(sizeof(char) * size);
+	bytes = getline(&buf, &size, stdin);
 
-	if (bytes == 0)
+	if (bytes == EOF)
 	{
-		_putchar('\n');
-		free(buf);
+		if (isatty(STDIN_FILENO) == 1)
+		{
+			_putchar('\n');
+		}
+			free(buf);
 		exit(EXIT_SUCCESS);
 	}
 	else if (bytes == -1)
@@ -77,22 +80,23 @@ int string_length(char *string)
  * @n: sting length
  * Return: destination memory address
  *
- *char *strcpy(char *dest, char *src, int n)
- *{
- *	int idx;
- *
- *	for (idx = 0; idx < n && src[idx] != '\0'; idx++)
- *	{
- *		dest[idx] = src[idx];
- *	}
- *	while (idx < n)
- *	{
- *		dest[idx] = '\0';
- *		idx++;
- *	}
- *	return (dest);
- *}
  */
+char *string_cpy(char *dest, char *src, int n)
+{
+	int idx;
+
+	for (idx = 0; idx < n && src[idx] != '\0'; idx++)
+	{
+		dest[idx] = src[idx];
+	}
+	while (idx < n)
+	{
+		dest[idx] = '\0';
+		idx++;
+	}
+	return (dest);
+}
+
 /**
  * string_compare - compares two strings to acertain if they are identical
  * @s1: string one
