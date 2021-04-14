@@ -80,22 +80,23 @@ int string_length(char *string)
  * @n: sting length
  * Return: destination memory address
  *
- *char *strcpy(char *dest, char *src, int n)
- *{
- *	int idx;
- *
- *	for (idx = 0; idx < n && src[idx] != '\0'; idx++)
- *	{
- *		dest[idx] = src[idx];
- *	}
- *	while (idx < n)
- *	{
- *		dest[idx] = '\0';
- *		idx++;
- *	}
- *	return (dest);
- *}
  */
+char *string_cpy(char *dest, char *src, int n)
+{
+	int idx;
+
+	for (idx = 0; idx < n && src[idx] != '\0'; idx++)
+	{
+		dest[idx] = src[idx];
+	}
+	while (idx < n)
+	{
+		dest[idx] = '\0';
+		idx++;
+	}
+	return (dest);
+}
+
 /**
  * string_compare - compares two strings to acertain if they are identical
  * @s1: string one
