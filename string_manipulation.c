@@ -27,7 +27,7 @@ char *get_buff(void)
 		perror("Error: could not read");
 		exit(EXIT_FAILURE);
 	}
-	buf[bytes + 1] = '\0';
+	buf[bytes - 1] = '\0';
 	fflush(stdin);
 	return (buf);
 }
