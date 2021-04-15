@@ -12,6 +12,6 @@ char *find_path(char **environ)
 {
 	if (environ == NULL)
 		return (NULL);
-	
+
 	return (NULL);
 }
