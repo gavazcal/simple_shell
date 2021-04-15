@@ -73,13 +73,12 @@ int string_length(char *string)
 	return (i);
 }
 
- /**
- * strcpy - copies a string
+/**
+ * string_cpy - copies a string
  * @dest: destination string
  * @src: origin string
  * @n: sting length
  * Return: destination memory address
- *
  */
 char *string_cpy(char *dest, char *src, int n)
 {
